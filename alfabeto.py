@@ -1,10 +1,18 @@
-lista = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"]
-indice = lista.index
+alfabeto = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z']
 
-separar = []
-palavra = input('Digite uma palavra: ')
-separar = list(palavra)
+def troca(pl, indice):
+    cripto = []
+    for letra in pl:
+        i = alfabeto.index(letra)
+        i = i+(indice)
+        while i > 25:
+            i -= 26
+        cripto.append(alfabeto[i])
+    return cripto
 
-formatada = 
+palavra = input("Digite uma palavra: ")
+chave = int(input("Em qual chave ela deve ser criptografada? "))
 
-print(f'Palavra escrita: {palavra}\nPalavra formatada: {separar}')
+lista = troca(palavra, chave)
+
+print(lista)
